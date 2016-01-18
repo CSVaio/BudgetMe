@@ -1,6 +1,5 @@
 package com.example.jophyjohnson.budgetme;
 
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,11 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.budgetme.jophyjohnson.fragments.GalleryFragment;
-import com.budgetme.jophyjohnson.fragments.ImportFragment;
+import com.budgetme.jophyjohnson.fragments.BudgetFragment;
 import com.budgetme.jophyjohnson.fragments.MainFragment;
-import com.budgetme.jophyjohnson.fragments.ManageFragment;
-import com.budgetme.jophyjohnson.fragments.SlideshowFragment;
+import com.budgetme.jophyjohnson.fragments.OverviewFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -94,15 +91,13 @@ public class MainActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
-            fm.beginTransaction().replace(R.id.content_frame,new ImportFragment()).commit();
-        } else if (id == R.id.nav_gallery) {
-            fm.beginTransaction().replace(R.id.content_frame, new GalleryFragment()).commit();
-        } else if (id == R.id.nav_slideshow) {
+        if (id == R.id.nav_overview) {
+            fm.beginTransaction().replace(R.id.content_frame,new OverviewFragment()).commit();
+        } else if (id == R.id.nav_Budget) {
+            fm.beginTransaction().replace(R.id.content_frame, new BudgetFragment()).commit();
+        } else if (id == R.id.nav_Spending) {
             fm.beginTransaction().replace(R.id.content_frame, new SlideshowFragment()).commit();
-        } else if (id == R.id.nav_manage) {
-            fm.beginTransaction().replace(R.id.content_frame, new ManageFragment()).commit();
-        } else if (id == R.id.nav_share) {
+        }  else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
