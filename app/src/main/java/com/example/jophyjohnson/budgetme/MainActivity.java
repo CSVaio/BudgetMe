@@ -15,8 +15,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.budgetme.jophyjohnson.fragments.GalleryFragment;
 import com.budgetme.jophyjohnson.fragments.ImportFragment;
 import com.budgetme.jophyjohnson.fragments.MainFragment;
+import com.budgetme.jophyjohnson.fragments.ManageFragment;
+import com.budgetme.jophyjohnson.fragments.SlideshowFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentManager fm = getFragmentManager();
-        fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
+        fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit(); //switches content_main.xml to fragment_main.xml
     }
 
     @Override
@@ -94,11 +97,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camara) {
             fm.beginTransaction().replace(R.id.content_frame,new ImportFragment()).commit();
         } else if (id == R.id.nav_gallery) {
-
+            fm.beginTransaction().replace(R.id.content_frame, new GalleryFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-
+            fm.beginTransaction().replace(R.id.content_frame, new SlideshowFragment()).commit();
         } else if (id == R.id.nav_manage) {
-
+            fm.beginTransaction().replace(R.id.content_frame, new ManageFragment()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
