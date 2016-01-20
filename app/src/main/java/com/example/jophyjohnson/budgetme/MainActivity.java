@@ -17,6 +17,9 @@ import android.view.MenuItem;
 import com.budgetme.jophyjohnson.fragments.BudgetFragment;
 import com.budgetme.jophyjohnson.fragments.MainFragment;
 import com.budgetme.jophyjohnson.fragments.OverviewFragment;
+import com.budgetme.jophyjohnson.fragments.SpendingsFragment;
+import com.budgetme.jophyjohnson.fragments.SummaryFragment;
+import com.budgetme.jophyjohnson.fragments.TrendsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -96,8 +99,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_Budget) {
             fm.beginTransaction().replace(R.id.content_frame, new BudgetFragment()).commit();
         } else if (id == R.id.nav_Spending) {
-            fm.beginTransaction().replace(R.id.content_frame, new SlideshowFragment()).commit();
-        }  else if (id == R.id.nav_share) {
+            fm.beginTransaction().replace(R.id.content_frame, new SpendingsFragment()).commit();
+        } else if (id == R.id.nav_Trends) {
+            fm.beginTransaction().replace(R.id.content_frame, new TrendsFragment()).commit();
+        }else if (id == R.id.nav_summary) {
+            fm.beginTransaction().replace(R.id.content_frame, new SummaryFragment()).commit();
+        } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
