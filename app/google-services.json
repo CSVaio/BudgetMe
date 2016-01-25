@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_id": "budgetme-4740a",
+    "project_number": "905745560286",
+    "name": "BudgetMe"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905745560286:android:67fc91adbe1b3021",
+        "client_id": "android:com.example.jophyjohnson.budgetme",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.jophyjohnson.budgetme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905745560286-0ruvptge31jg8q7n0fntjfggmpndh4c5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jophyjohnson.budgetme",
+            "certificate_hash": "A33865611203CBD6075F45BA30EFE2C4156BF5FA"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
