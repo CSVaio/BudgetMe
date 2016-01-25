@@ -5,13 +5,14 @@
 
     <include
         android:id="@+id/app_bar"
-        layout="@layout/app_bar_main"/>
+        layout="@layout/app_bar_main" />
 
-    <TextView
-        android:id="@+id/textView8"
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Login window"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_gravity="center" />
+
+
 </FrameLayout>
