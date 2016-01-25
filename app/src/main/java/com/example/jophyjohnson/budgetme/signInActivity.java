@@ -1,5 +1,6 @@
 package com.example.jophyjohnson.budgetme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +23,7 @@ public class signInActivity extends AppCompatActivity implements
 
     private GoogleApiClient mGoogleApiClient;
     private static final String TAG = "SignInActivity";
+    private static final int RC_SIGN_IN = 9001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,9 @@ public class signInActivity extends AppCompatActivity implements
         signInButton.setSize(SignInButton.SIZE_WIDE);
         signInButton.setScopes(gso.getScopeArray());
         // [END customize_button]
+
+
+        findViewById(R.id.sign_in_button).setOnClickListener(this);
     }
 
     @Override
@@ -67,11 +72,16 @@ public class signInActivity extends AppCompatActivity implements
         Log.d(TAG, "onConnectionFailed:" + connectionResult);
     }
 
+    private void signIn() {
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sign_in_button:
-               // signIn();
+               signIn();
                 break;
             //case R.id.sign_out_button:
               //  signOut();
