@@ -14,5 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signed_out"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
 
 </FrameLayout>

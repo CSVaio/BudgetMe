@@ -6,4 +6,8 @@
 
     <string name="action_settings">Settings</string>
     <string name="action_login">Logins</string>
+    <string name="signed_in_fmt">signed in as: </string>
+    <string name="signed_in">Signed in</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="signed_out">Signed out</string>
 </resources>
