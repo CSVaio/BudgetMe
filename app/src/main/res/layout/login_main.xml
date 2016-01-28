@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="3">
+    android:layout_height="match_parent">
 
     <include
         android:id="@+id/app_bar"
-        layout="@layout/app_bar_main" />
+        layout="@layout/app_bar_secondary"/>
 
         <TextView
             android:id="@+id/title_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="250dp"
+            android:layout_marginTop="100dp"
             android:text="@string/title_text"
             android:gravity="center"
             android:textColor="@android:color/darker_gray"
@@ -20,12 +19,13 @@
 
         <TextView
             android:id="@+id/detail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fadeScrollbars="true"
             android:gravity="center"
             android:maxLines="5"
             android:padding="10dp"
+            android:layout_marginTop="100dp"
             android:scrollbars="vertical"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp" />
@@ -41,17 +41,19 @@
             <TextView
                 android:id="@+id/status"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
                 android:text="@string/signed_out"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="14sp" />
+                android:textSize="50sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:layout_weight="1"
-        android:layout_gravity="center_horizontal|top">
+        android:layout_marginTop="0dp"
+        android:layout_gravity="right|top">
             <Button
                 android:id="@+id/sign_out_button"
                 android:layout_width="0dp"
@@ -70,4 +72,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
