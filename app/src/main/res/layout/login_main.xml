@@ -4,71 +4,47 @@
 
     <include
         android:id="@+id/app_bar"
-        layout="@layout/app_bar_secondary"/>
+        layout="@layout/app_bar_secondary" />
 
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="250dp"
-            android:layout_marginTop="100dp"
-            android:text="@string/title_text"
-            android:gravity="center"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="36sp" />
-
-        <TextView
-            android:id="@+id/detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fadeScrollbars="true"
-            android:gravity="center"
-            android:maxLines="5"
-            android:padding="10dp"
-            android:layout_marginTop="100dp"
-            android:scrollbars="vertical"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="14sp" />
-
-        <com.google.android.gms.common.SignInButton
-            android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-
-
-
-            <TextView
-                android:id="@+id/status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="75dp"
-                android:text="@string/signed_out"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="50sp" />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="55dp"
+        android:text="@string/signed_out"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="50sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="520dp"
         android:layout_weight="1"
-        android:layout_marginTop="0dp"
-        android:layout_gravity="right|top">
-            <Button
-                android:id="@+id/sign_out_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/sign_out"
-                android:layout_gravity="bottom" />
+        android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/disconnect_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/disconnect"
-                android:layout_gravity="bottom" />
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/sign_out" />
+
+        <Button
+            android:id="@+id/disconnect_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/disconnect" />
 
     </LinearLayout>
 

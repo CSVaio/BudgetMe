@@ -40,6 +40,7 @@ public class signInActivity extends AppCompatActivity implements
 
 
 
+
         //view
         mStatusTextView = (TextView) findViewById(R.id.status);
 
@@ -97,7 +98,7 @@ public class signInActivity extends AppCompatActivity implements
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
             mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
-            updateUI(true);
+            updateUI(false);
         } else {
             // Signed out, show unauthenticated UI.
             updateUI(false);
@@ -165,6 +166,8 @@ public class signInActivity extends AppCompatActivity implements
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @Override
     public void onClick(View v) {

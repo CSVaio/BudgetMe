@@ -22,10 +22,14 @@
 
         <activity
             android:name=".signInActivity"
-            android:label="Sign In"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Google Sign-In"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 
