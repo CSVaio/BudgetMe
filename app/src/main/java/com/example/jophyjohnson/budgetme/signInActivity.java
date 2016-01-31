@@ -97,8 +97,9 @@ public class signInActivity extends AppCompatActivity implements
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
-            mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
-            mStatusTextView.setText(acct.getDisplayName());
+            String signedIn = getString(R.string.signed_in_fmt);
+            signedIn = signedIn + acct.getDisplayName();
+            mStatusTextView.setText(signedIn);
             updateUI(true);
         } else {
             // Signed out, show unauthenticated UI.
@@ -122,6 +123,19 @@ public class signInActivity extends AppCompatActivity implements
                 });
     }
 
+    private void revokeAccess() {
+        Auth.GoogleSignInApi.revokeAccess(mGoogleApiClient).setResultCallback(
+                new ResultCallback<Status>() {
+                    @Override
+                    public void onResult(Status status) {
+                        //start exclude
+                        updateUI(true);
+                        //end exclude
+                    }
+                }
+        );
+
+    }
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
         // An unresolvable error has occurred and Google APIs (including Sign-In) will not
@@ -170,6 +184,8 @@ public class signInActivity extends AppCompatActivity implements
 
 
 
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -179,9 +195,9 @@ public class signInActivity extends AppCompatActivity implements
             case R.id.sign_out_button:
                 signOut();
                 break;
-            //case R.id.disconnect_button:
-              //  revokeAccess();
-                //break;
+            case R.id.disconnect_button:
+                revokeAccess();
+                break;
         }
     }
 }
